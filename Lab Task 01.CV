@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mashal Zafeer Kiani - CV</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.5;
+            color: #333;
+        }
+        .page {
+            width: 210mm;
+            min-height: 297mm;
+            margin: 10mm auto;
+            padding: 15mm;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            position: relative;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .name {
+            font-size: 28px;
+            font-weight: bold;
+            color: #2c3e50;
+            margin: 0;
+        }
+        .title {
+            font-size: 16px;
+            color: #7f8c8d;
+            margin: 5px 0;
+        }
+        .contact-info {
+            text-align: right;
+        }
+        .contact-item {
+            margin: 3px 0;
+            font-size: 14px;
+        }
+        .divider {
+            height: 2px;
+            background-color: #2c3e50;
+            margin: 15px 0;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .section-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 5px;
+        }
+        .subsection {
+            margin-bottom: 15px;
+        }
+        .subsection-title {
+            font-weight: bold;
+            margin: 5px 0;
+        }
+        .subsection-period {
+            color: #7f8c8d;
+            font-style: italic;
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 0;
+            margin: 0;
+        }
+        .skill-category {
+            width: 50%;
+            box-sizing: border-box;
+            padding-right: 20px;
+            margin-bottom: 10px;
+        }
+        .skill-category-title {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        ul {
+            margin: 5px 0;
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 3px;
+        }
+        .footer {
+            position: absolute;
+            bottom: 15mm;
+            left: 15mm;
+            right: 15mm;
+            text-align: center;
+            font-size: 12px;
+            color: #7f8c8d;
+            border-top: 1px solid #eee;
+            padding-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <div class="header">
+            <div>
+                <h1 class="name">MASHAL ZAFEER KIANI</h1>
+                <p class="title">Software Engineering Student</p>
+            </div>
+            <div class="contact-info">
+                <p class="contact-item"><a href="https://github.com/MashalKiani21" target="_blank">github.com/MashalKiani21</a></p>
+                <p class="contact-item">mashal.zafeer@gmail.com</p>
+                <p class="contact-item">+92-3160897186</p>
+            </div>
+        </div>
+        
+        <div class="divider"></div>
+        
+        <div class="section">
+            <div class="section-title">PERSONAL PROFILE</div>
+            <p>A passionate Software Engineering student with strong web development and machine learning foundations. Highly motivated to design intelligent systems and deliver real-world applications.</p>
+        </div>
+        
+        <div class="section">
+            <div class="section-title">WORK EXPERIENCE</div>
+            <div class="subsection">
+                <div class="subsection-title">Freelance Web Developer</div>
+                <div class="subsection-period">2023 - Present</div>
+                <ul>
+                    <li>Developed and deployed responsive web applications using HTML, CSS, and Python (Flask/Django)</li>
+                    <li>Handled backend logic and integrated frontend with APIs</li>
+                </ul>
+            </div>
+            <div class="subsection">
+                <div class="subsection-title">Intern – Software Development</div>
+                <div class="subsection-period">2022 - 2023</div>
+                <ul>
+                    <li>Built internal tools for university tasks</li>
+                    <li>Assisted in development and testing phases, and collaborated in Agile teams</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="section">
+            <div class="section-title">KEY SKILLS</div>
+            <div class="skills-list">
+                <div class="skill-category">
+                    <div class="skill-category-title">Web Development</div>
+                    <ul>
+                        <li>HTML, CSS, JavaScript</li>
+                        <li>Python, Flask, Django</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-category-title">Machine Learning</div>
+                    <ul>
+                        <li>Logistic Regression, KNN, ID3, Naive Bayes</li>
+                        <li>Data Preprocessing: Standardization, Normalization</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-category-title">Tools</div>
+                    <ul>
+                        <li>Git & GitHub</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <div class="section-title">EDUCATION</div>
+            <div class="subsection">
+                <div class="subsection-title">University of Azad Jammu and Kashmir</div>
+                <div class="subsection-period">Expected Graduation: 2026</div>
+                <ul>
+                    <li>Bachelor's in Software Engineering</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer">
+            © Mashal Zafeer Kiani. All Rights Reserved 2025.
+        </div>
+    </div>
+</body>
+</html>

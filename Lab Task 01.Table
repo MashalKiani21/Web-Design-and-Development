@@ -4,7 +4,7 @@
     <title>Film Ratings</title>
     <style>
         table {
-            width: 80%;
+            width: 50%;
             border-collapse: collapse;
         }
         th, td {
@@ -51,8 +51,8 @@
         <td>9</td>
     </tr>
     <tr class="highlight">
-        <td colspan="4">Highest Rating</td>
-        <td>9.5</td>
+        <th colspan="4">Highest Rating</th>
+        <th>9.5</th>
     </tr>
     <tr>
         <td rowspan="2">Italy</td>
@@ -68,13 +68,14 @@
         <td>7.9</td>
     </tr>
     <tr class="highlight">
-        <td colspan="4">Highest Rating</td>
-        <td>8.9</td>
+        <th colspan="4" style="background-color: solid #ccc;">Highest Rating</th>
+        <th>8.9</th>
     </tr>
 </table>
 
 </body>
 </html>
+
 
 
 

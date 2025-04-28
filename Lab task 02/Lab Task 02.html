@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Class Web Portal (Float Version)</title>
+  <title>Class Web Portal</title>
   <style>
     * {
       box-sizing: border-box;
@@ -13,16 +13,17 @@
       font-family: Arial, sans-serif;
     }
     .top-bar {
-      background-color: #f6f9e8;
       padding: 10px 60px;
       overflow: hidden;
     }
     .logo {
       float: left;
       margin-left: 40px;
+      margin-top: 10px;
     }
     .logo img {
-      height: 30px;
+      height: 20px;
+      object-fit: cover;
     }
     .nav {
       float: left;
@@ -31,20 +32,25 @@
       border-radius: 40px;
       background-color: white;
       padding: 10px 20px;
+      height: 40px;
     }
     .nav a {
-      text-decoration: none;
-      color: black;
-      margin: 0 10px;
-      padding: 10px 15px;
-      border-radius: 20px;
-      display: inline-block;
-    }
-    .nav a:hover,
-    .nav a.active {
-      background-color: orange;
-      color: white;
-    }
+   text-decoration: none;
+  color: black;
+  font-weight: bold;
+  margin: 0 10px;
+  border-radius: 20px;
+  display: inline-block;
+  padding: 0 10px; /* side padding only */
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.nav a:hover,
+.nav a.active {
+  background-color: orange;
+  color: white;
+}
+
     .contact-btn {
       float: right;
       background-color: black;
@@ -57,8 +63,9 @@
     }
 
     .hero {
+       
       background-color: #f6f9e8;
-      padding: 40px 0;
+      padding: 40px ;
       overflow: hidden;
     }
     .hero-left {
@@ -67,10 +74,13 @@
       padding-left: 60px;
     }
     .hero-left h1 {
+      margin-top: 120px;
       font-size: 3.5em;
+      padding-left:60;
     }
     .hero-left p {
       font-size: 1.3em;
+      padding-left:60;
     }
     .hero-left button {
       margin-top: 10px;
@@ -94,7 +104,7 @@
 
     .black-banner {
       background-color: black;
-      color: white;
+      color: rgba(255, 255, 255, 0.789);
       text-align: center;
       padding: 95px 20px;
       font-size: 2em;
@@ -103,9 +113,6 @@
 
     .contact-section {
       background-color: #f6f9e8;
-      margin: 20px;
-      border: 2px solid black;
-      border-radius: 30px;
       overflow: hidden;
     }
     .map-box {
@@ -124,7 +131,7 @@
       padding: 40px;
       background-color: #f6f9e8;
     }
-    .contact-form h3 {
+    .contact-form h2 {
       margin-top: 0;
     }
     .contact-form label {
@@ -135,7 +142,7 @@
     .contact-form textarea {
       width: 100%;
       padding: 10px;
-      margin-top: 5px;
+      margin-top: 0px;
       margin-bottom: 15px;
       border: 1px solid #ccc;
       border-radius: 5px;
@@ -147,16 +154,29 @@
       padding: 8px 20px;
       border-radius: 5px;
       cursor: pointer;
-      margin-top: 10px;
+      /* margin-top: px; */
       width: fit-content;
     }
 
     footer {
+      height: 70px;
       background-color: black;
       color: white;
       text-align: center;
       padding: 10px;
       clear: both;
+      padding-top: 25px;
+    }
+    #input{
+      border: 2px solid black;
+      
+    }
+    label{
+      font-weight: bold;
+    }
+    #btn-
+    {
+      margin-right: 150px;
     }
   </style>
 </head>
@@ -174,7 +194,8 @@
       <a href="#">Resources</a>
       <a href="#">Blogs</a>
     </div>
-    <a href="#" class="contact-btn">Contact</a>
+    <div id="btn-">
+    <a href="#" class="contact-btn">Contact</a></div>
   </div>
 
   <div class="hero">
@@ -197,15 +218,16 @@
       <iframe src="https://www.google.com/maps?q=Department+of+Software+Engineering+UAJK&output=embed"></iframe>
     </div>
     <div class="contact-form">
-      <h3>Get in Touch with the Instructor</h3>
-      <label for="name">Name</label>
-      <input type="text" id="name">
-      <label for="email">Email</label>
-      <input type="email" id="email">
-      <label for="tel">Tel</label>
-      <input type="tel" id="tel">
-      <label for="message">Message</label>
-      <textarea id="message" rows="4"></textarea>
+      <h2>Get in Touch with the Instructor</h2>
+      <p>Have questions about lectures, labs, or assignments? Use the form below to contact your instructor or TA. We're here to support your learning journey.</p>
+      <label for="name">Name:</label>
+      <input id="input" type="text" id="name">
+      <label for="email">Email:</label>
+      <input id="input" type="email" id="email">
+      <label for="tel">Tel:</label>
+      <input id="input" type="tel" id="tel">
+      <label for="message">Message:</label>
+      <textarea id="input" id="message" rows="4"></textarea>
       <button>Submit</button>
     </div>
   </div>

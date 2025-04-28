@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Class Web Portal (Float Version)</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+    .top-bar {
+      background-color: #f6f9e8;
+      padding: 10px 60px;
+      overflow: hidden;
+    }
+    .logo {
+      float: left;
+      margin-left: 40px;
+    }
+    .logo img {
+      height: 30px;
+    }
+    .nav {
+      float: left;
+      margin-left: 100px;
+      border: 2px solid black;
+      border-radius: 40px;
+      background-color: white;
+      padding: 10px 20px;
+    }
+    .nav a {
+      text-decoration: none;
+      color: black;
+      margin: 0 10px;
+      padding: 10px 15px;
+      border-radius: 20px;
+      display: inline-block;
+    }
+    .nav a:hover,
+    .nav a.active {
+      background-color: orange;
+      color: white;
+    }
+    .contact-btn {
+      float: right;
+      background-color: black;
+      color: white;
+      padding: 8px 20px;
+      text-decoration: none;
+      border-radius: 20px;
+      margin-right: 40px;
+      margin-top: 5px;
+    }
+
+    .hero {
+      background-color: #f6f9e8;
+      padding: 40px 0;
+      overflow: hidden;
+    }
+    .hero-left {
+      float: left;
+      width: 50%;
+      padding-left: 60px;
+    }
+    .hero-left h1 {
+      font-size: 3.5em;
+    }
+    .hero-left p {
+      font-size: 1.3em;
+    }
+    .hero-left button {
+      margin-top: 10px;
+      background-color: orange;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+    .hero-right {
+      float: left;
+      width: 50%;
+      text-align: left;
+      padding-left: 30px;
+    }
+    .hero-right img {
+      width: 80%;
+      border-radius: 20px;
+    }
+
+    .black-banner {
+      background-color: black;
+      color: white;
+      text-align: center;
+      padding: 95px 20px;
+      font-size: 2em;
+      clear: both;
+    }
+
+    .contact-section {
+      background-color: #f6f9e8;
+      margin: 20px;
+      border: 2px solid black;
+      border-radius: 30px;
+      overflow: hidden;
+    }
+    .map-box {
+      float: left;
+      width: 50%;
+    }
+    .map-box iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      min-height: 75vh;
+    }
+    .contact-form {
+      float: left;
+      width: 50%;
+      padding: 40px;
+      background-color: #f6f9e8;
+    }
+    .contact-form h3 {
+      margin-top: 0;
+    }
+    .contact-form label {
+      margin-top: 10px;
+      display: block;
+    }
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .contact-form button {
+      background-color: orange;
+      color: white;
+      border: none;
+      padding: 8px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 10px;
+      width: fit-content;
+    }
+
+    footer {
+      background-color: black;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      clear: both;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="top-bar">
+    <div class="logo">
+      <img src="image/logo.png" alt="Logo">
+    </div>
+    <div class="nav">
+      <a href="#" class="active">Home</a>
+      <a href="#">Lectures</a>
+      <a href="#">Labs</a>
+      <a href="#">Student Work</a>
+      <a href="#">Resources</a>
+      <a href="#">Blogs</a>
+    </div>
+    <a href="#" class="contact-btn">Contact</a>
+  </div>
+
+  <div class="hero">
+    <div class="hero-left">
+      <h1>Welcome to Our <br> Class Web Portal</h1>
+      <p>This site is part of our practical learning journey in web development. Here, students learn HTML, CSS (including floats), forms, and responsive design by building and contributing to this platform.</p>
+      <button>Start Exploring</button>
+    </div>
+    <div class="hero-right">
+      <img src="image/hero-image.jpg" alt="Team working on computer">
+    </div>
+  </div>
+
+  <div class="black-banner">
+    This isn’t just a website — it’s a learning journey. Here,<br> students document what they learn and build.
+  </div>
+
+  <div class="contact-section">
+    <div class="map-box">
+      <iframe src="https://www.google.com/maps?q=Department+of+Software+Engineering+UAJK&output=embed"></iframe>
+    </div>
+    <div class="contact-form">
+      <h3>Get in Touch with the Instructor</h3>
+      <label for="name">Name</label>
+      <input type="text" id="name">
+      <label for="email">Email</label>
+      <input type="email" id="email">
+      <label for="tel">Tel</label>
+      <input type="tel" id="tel">
+      <label for="message">Message</label>
+      <textarea id="message" rows="4"></textarea>
+      <button>Submit</button>
+    </div>
+  </div>
+
+  <footer>
+    All rights reserved © 2025
+  </footer>
+
+</body>
+</html>

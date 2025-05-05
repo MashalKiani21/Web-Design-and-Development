@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Mashal Kinai- CV</title>
+  <title>Mashal - CV</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -21,41 +21,33 @@
       box-shadow: 0 0 5px rgba(0,0,0,0.1);
     }
 
-    .header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
+    table {
+      width: 100%;
+      border-collapse: collapse;
     }
 
-    .profile {
-      display: flex;
-      align-items: center;
-    }
-
-    .profile img {
+    .profile-img {
       width: 90px;
       height: 90px;
       border-radius: 50%;
-      margin-right: 15px;
       object-fit: cover;
       background-color: #e0e0e0;
     }
 
-    .name-title h1 {
+    h1 {
       margin: 0;
       font-size: 22px;
     }
 
-    .name-title p {
+    .subheading {
       margin: 4px 0 0;
       font-style: italic;
       font-size: 13px;
     }
 
     .contact {
-      text-align: right;
       font-size: 13px;
+      text-align: right;
     }
 
     .contact a {
@@ -63,28 +55,19 @@
       text-decoration: none;
     }
 
-    hr {
-      border: none;
-      border-top: 2px solid #876307;
-      margin: 15px 0;
-    }
-
-    .row {
-      display: flex;
-      margin-bottom: 20px;
-    }
-
     .label {
-      width: 25%;
       color: #876307;
       font-weight: bold;
       font-size: 13px;
-      padding-right: 10px;
       font-style: italic;
+      vertical-align: top;
+      width: 25%;
+      padding: 8px 10px 8px 0;
     }
 
     .content {
       width: 75%;
+      padding: 8px 0;
     }
 
     .content h3 {
@@ -101,81 +84,105 @@
       margin: 5px 0;
     }
 
+    hr {
+      border: none;
+      border-top: 2px solid #876307;
+      margin: 15px 0;
+    }
+
     .footer {
       text-align: center;
       font-size: 12px;
       color: #000;
       margin-top: 10px;
     }
+
+    .name-title {
+      vertical-align: top;
+      padding-left: 15px;
+    }
   </style>
 </head>
 <body>
   <div class="cv-container">
-    <div class="header">
-      <div class="profile">
-        <img src="https://cdn-icons-png.flaticon.com/512/6997/6997662.png" alt="Profile">
-        <div class="name-title">
+    <table>
+      <!-- Header row with aligned columns -->
+      <tr>
+        <td rowspan="2" style="width: 100px;">
+          <img src="https://cdn-icons-png.flaticon.com/512/6997/6997662.png" alt="Profile" class="profile-img" />
+        </td>
+        <td class="name-title" style="vertical-align: top;">
           <h1>Mashal Zafeer Kiani</h1>
-          <p><b>Software Engineering Student</b></p>
-        </div>
-      </div>
-      <div class="contact">
-        <p>
+          <p class="subheading"><b>Software Engineering Student</b></p>
+        </td>
+        <td class="contact" rowspan="2" style="vertical-align: top;">
           <a href="https://github.com/MashalKiani21" target="_blank">https://github.com/MashalKiani21</a><br>
           <a href="mailto:mashal.zafeer@gmail.com">mashal.zafeer@gmail.com</a><br>
-          <a href="tel:+923160897186">+923160897186</a>
-        </p>
-      </div>
-    </div>
+          <a href="tel:+92-3160897186">+92-3160897186</a>
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+      </tr>
 
-    <hr>
+      <!-- Divider -->
+      <tr><td colspan="3"><hr /></td></tr>
 
-    <div class="row">
-      <div class="label">Personal Profile</div>
-      <div class="content">
-        <p>
-          Motivated and detail-oriented software engineering student at the University of Azad Jammu and Kashmir.
-          Passionate about web development and machine learning, with hands-on experience through academic and freelance projects.
-        </p>
-      </div>
-    </div>
+      <!-- Personal Profile -->
+      <tr>
+        <td class="label">Personal Profile</td>
+        <td class="content" colspan="2">
+          <p>
+            Motivated and detail-oriented software engineering student at the University of Azad Jammu and Kashmir.
+            Passionate about web development and machine learning, with hands-on experience through academic and freelance projects.
+          </p>
+        </td>
+      </tr>
 
-    <div class="row">
-      <div class="label">Experience</div>
-      <div class="content">
-        <h3>Freelance Web Developer</h3>
-        <p><em>2023 - Present</em></p>
-        <p>Developed multiple client websites using HTML, CSS, and JavaScript. Delivered responsive, user-friendly designs for businesses.</p>
+      <!-- Experience -->
+      <tr>
+        <td class="label">Experience</td>
+        <td class="content" colspan="2">
+          <h3>Freelance Web Developer</h3>
+          <p><em>2023 - Present</em></p>
+          <p>Developed multiple client websites using HTML, CSS, and JavaScript. Delivered responsive, user-friendly designs for businesses.</p>
 
-        <h3>Intern - Software House</h3>
-        <p><em>Summer 2022</em></p>
-        <p>Worked on a team project involving a fitness tracking web app. Assisted in both front-end design and back-end development.</p>
-      </div>
-    </div>
+          <h3>Intern - Software House</h3>
+          <p><em>Summer 2022</em></p>
+          <p>Worked on a team project involving a fitness tracking web app. Assisted in both front-end design and back-end development.</p>
+        </td>
+      </tr>
 
-    <div class="row">
-      <div class="label">Key Skills</div>
-      <div class="content">
-        <ul>
-          <li>HTML, CSS, JavaScript, Python</li>
-          <li>Machine Learning (Logistic Regression, KNN, Neural Networks)</li>
-          <li>Responsive Web Design</li>
-        </ul>
-      </div>
-    </div>
+      <!-- Key Skills -->
+      <tr>
+        <td class="label">Key Skills</td>
+        <td class="content" colspan="2">
+          <ul>
+            <li>HTML, CSS, JavaScript, Python</li>
+            <li>Machine Learning (Logistic Regression, KNN, Neural Networks)</li>
+            <li>Responsive Web Design</li>
+          </ul>
+        </td>
+      </tr>
 
-    <div class="row">
-      <div class="label">Education</div>
-      <div class="content">
-        <h3>University of Azad Jammu and Kashmir</h3>
-        <p><em>Bachelor's in Software Engineering</em></p>
-        <p>Expected Graduation: 2026. Focus on software development, databases, and artificial intelligence.</p>
-      </div>
-    </div>
+      <!-- Education -->
+      <tr>
+        <td class="label">Education</td>
+        <td class="content" colspan="2">
+          <h3>University of Azad Jammu and Kashmir</h3>
+          <p><em>Bachelor's in Software Engineering</em></p>
+          <p>Expected Graduation: 2026. Focus on software development, databases, and artificial intelligence.</p>
+        </td>
+      </tr>
 
-    <div class="footer">
-      <p>© All Rights Reserved 2025 WDD.</p>
-    </div>
+      <!-- Footer -->
+      <tr>
+        <td colspan="3" class="footer">
+          <p>© All Rights Reserved 2025 WDD.</p>
+        </td>
+      </tr>
+    </table>
   </div>
 </body>
 </html>
+

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Three Circles Animation</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: white;
+      gap: 30px;
+      margin: 0;
+    }
+
+    .circle {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      animation: bounce 3s infinite ease-in-out, dim 3s infinite ease-in-out;
+    }
+
+    /* Different colors for circles */
+    .circle.red { background: red; animation-delay: 0s, 0s; }
+    .circle.green { background: green; animation-delay: 0.5s, 0.5s; }
+    .circle.blue { background: blue; animation-delay: 1s, 1s; }
+
+    /* Bounce animation (up-down) */
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-100px); }
+    }
+
+    /* Dimming effect */
+    @keyframes dim {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.4; }
+    }
+  </style>
+</head>
+<body>
+  <div class="circle red"></div>
+  <div class="circle green"></div>
+  <div class="circle blue"></div>
+</body>
+</html>
+
+
+
+
+
+

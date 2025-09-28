@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Client Ramp</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Poppins', sans-serif; background: #f2f7ff; color: #1a2340; line-height: 1.5; }
+    a { color: inherit; text-decoration: none; }
+    header {
+ 
+  background: 
+    linear-gradient(
+      rgba(3, 38, 50, 0.85), 
+      rgba(3, 50, 65, 0.75)
+    ),
+    url('img/home-banner-bg.webp') center/cover no-repeat;
+  padding-bottom: 60px;
+}
+    .navbar {
+      display: flex; align-items: center; justify-content: space-between; padding: 20px 5%;
+    }
+    .navbar .logo img {
+  height: 35px;
+  margin-left:  130px;
+}
+
+.navbar nav {
+  display: flex;
+  margin-left: 200px; 
+  margin-right: 130px; 
+}
+
+    .navbar nav a {
+      margin: 0 12px; font-size: 0.9rem; color: #fff; font-weight: 500;
+    }
+    .navbar .btn-get {
+      background: #ffaa33; color: #fff; padding: 8px 16px; border: none; border-radius: 5px; font-weight: 750; margin-right: 230px;
+    }
+    .navbar .btn-get::after {
+     content: '\2192'; 
+     margin-left: 8px; 
+     font-size: 1rem;  
+}
+
+    .hero-content {
+      text-align: center; color: #fff; max-width: 700px; margin: 0 auto; padding: 80px 20px 0;
+    }
+    .hero-content h1 {
+      font-size: 2.8rem; font-weight: 700; margin-bottom: 10px;
+    }
+    .hero-content h1 span { color: #2b95ff; }
+    .hero-content p {
+      font-size: 1rem; margin-bottom: 24px; color: #e0e6f0;
+    }
+    .hero-content .btns button {
+      padding: 12px 24px; font-size: 0.95rem; font-weight: 600; border: none; border-radius: 5px; cursor: pointer;
+      margin: 0 8px;
+    }
+    .btn-primary { background: #ffaa33; color: #fff; }
+    .btn-secondary { background: #2b95ff; color: #fff; }
+
+    /* STATS */
+    .stats {
+      display: flex; justify-content: center; flex-wrap: wrap; gap: 130px;
+      background: #2b95ff; color: #fff; padding: 70px 5%; font-weight: 800;
+    }
+    .stats div { text-align: center; }
+    .stats div span { display: block; font-size: 2rem; }
+
+    /* SECTIONS */
+    .section {
+  display: flex;
+  align-items: flex-start; /* Aligns items to the top */
+  justify-content: space-between;
+  padding: 60px 5%;
+  gap: 20px;
+  background: #fff;
+}
+
+    .section:nth-child(even) { background: #eaf4ff; }
+    .section.reverse { flex-direction: row-reverse; }
+    .section .text {
+      flex: 1; max-width: 50%;
+    }
+    .section .text h2 {
+      font-size: 1.5rem; margin-bottom: 12px; font-weight: 600;
+    }
+    .section .text p {
+      font-size: 0.95rem; margin-bottom: 12px; color: #555;
+    }
+    .section .text ul {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 20px;
+  color: #444;
+  font-size: 0.9rem;
+}
+
+.section .text ul li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 8px;
+}
+
+.section .text ul li::before {
+  content: '→'; /* Default arrow icon */
+  position: absolute;
+  left: 0;
+  color: #2b95ff;
+  font-weight: bold;
+}
+
+/* Apply star icon to the last item only if it's the 4th child */
+.section .text ul li:nth-child(4):nth-last-child(1)::before {
+  content: '★';
+  color: #ffaa33;
+}
+
+    .section .text .btn-blue {
+      display: inline-block; margin-top: 16px; background: #2b95ff; color: #fff;
+      padding: 10px 20px; border: none; border-radius: 5px; font-weight: 600;margin-left: 20px;
+    }
+    .section .text .btn-blue::after {
+  content: '→';
+  font-weight: bold;
+  font-size: 1rem;
+}
+    .section .img {
+      flex: 1; text-align: center; max-width: 50%;
+    }
+    .section .img img {
+      width: 100%; border-radius: 5px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);border: 2px solid #8cbdef; /* Blue border around the section */
+      border-radius: 10px; /* Optional: adds rounded corners */
+    }
+    .project-link,
+.track-link,
+.quotations-link,
+.invoices-link,
+.administration-link,
+.messages-link {
+  color: #007bff;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+
+    /* SUPPORT */
+
+    .support {
+  background: #fff;
+  text-align: center;
+  padding: 80px 5%; /* Increased padding for more height */
+}
+
+.support h2 {
+  font-size: 1.9rem;
+  margin-bottom: 40px; /* Increased margin for spacing below the heading */
+}
+
+.support .items {
+  display: flex;
+  justify-content: space-evenly; /* Evenly distributes items horizontally */
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.support .item {
+  max-width: 180px;
+  font-size: 1rem;
+  color: #444;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.support .item img {
+  width: 60px;
+  margin-bottom: 30px;
+}
+
+
+
+    /* PRICING */
+    .pricing {
+      background: #eaf4ff; text-align: center; padding: 60px 5%;
+    }
+    .pricing h2 { font-size: 1.6rem; margin-bottom: 16px; }
+    .pricing p { margin-bottom: 32px; color: #555; }
+    .pricing .cards {
+      display: flex; justify-content: center; flex-wrap: wrap; gap: 24px;
+    }
+    .pricing .card {
+      background: #fff; padding: 24px; border-radius: 10px; width: 280px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);border: 2px solid #8cbdef; /* Blue border around the section */
+      border-radius: 10px; /* Optional: adds rounded corners */
+    }
+    .pricing .card h3 { font-size: 1.2rem; color: #1a2340; margin-bottom: 8px; } 
+    .pricing .card p { font-size: 0.95rem; color: #555; margin-bottom: 12px; }
+    .pricing .card ul {
+      list-style: none; text-align: left; margin-left: 0; padding-left: 0; font-size: 0.9rem;
+    }
+    .pricing .card ul li { margin-bottom: 8px; }
+    .pricing .card ul li::before {
+      content: '✔'; color: #2b95ff; margin-right: 6px;
+    }
+    .pricing .card .btn-order {
+      display: block; margin: 16px auto 0; background: #2b95ff; color: #fff;
+      padding: 10px 20px; border: none; border-radius: 5px; font-weight: 600;
+    }
+
+    /* FOOTER */
+
+
+.footer {
+  background-color: #3caaf0;
+  color: white;
+  padding: 40px 20px;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 30px;
+}
+
+.footer-left {
+  display: flex;
+  align-items: flex-start; /* Moves logo + text to the top */
+  gap: 8px;
+  margin-top: 18px;
+}
+
+
+.logo {
+  height: 20px;
+}
+
+.logo-text {
+  font-size: 18px;
+  font-weight: 600;
+  color: white;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin: 8px 0;
+}
+
+.footer-links i {
+  margin-right: 8px;
+}
+
+.footer-contact-section {
+  text-align: left;
+}
+
+.address {
+  margin-bottom: 15px;
+}
+
+.social-icons {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 15px;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.review-section p {
+  margin: 5px 0;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  margin: 40px 0 20px;
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 12px;
+  line-height: 1.6;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.footer-bottom a {
+  color: white;
+  text-decoration: underline;
+}
+
+.review-logos {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.review-logos img {
+  height: 25px;
+}
+
+
+
+  </style>
+</head>
+<body>
+
+  <!-- HERO -->
+  <header>
+    <div class="navbar">
+      <div class="logo">
+        <img src="img\logo-client-ramp1.webp" alt="Client Ramp Logo">
+      </div>
+      <nav>
+        <a href="#">Support</a>
+        <a href="#">FAQ</a>
+        <a href="#">Contact Us</a>
+        <a href="#">Sign In</a>
+      </nav>
+      <button class="btn-get">Get Started Now</button>
+    </div>
+    <div class="hero-content">
+      <h1>Manage Your <br><span>Clients and Projects</span></h1>
+      <p>All-in-one CRM, Project Management and Client relationship tools.</p>
+      <div class="btns">
+        <button class="btn-primary">Get Started Now</button>
+        <button class="btn-secondary">Sign In</button>
+      </div>
+      <p style="font-size:0.8rem; margin-top:8px; color:#e0e6f0;">
+        No credit card required to get started.
+      </p>
+    </div>
+  </header>
+
+  <!-- STATS -->
+  <div class="stats">
+    <div><span>2,486</span>Subscribers</div>
+    <div><span>645,089</span>Open Projects</div>
+    <div><span>152,834</span>Finished Projects</div>
+    <div><span>32,392</span>Project Members</div>
+  </div>
+
+  <!-- FEATURES -->
+  <div class="section">
+    <div class="text">
+      <h2>Manage Projects</h2>
+      <p>
+        Stay organized with the centralized  
+        <a href="#" class="project-link">platform for project Creation</a> task assingment,and deadline tracking.
+      </p>
+      <h2 class="key-features-heading">Key Features</h2>
+      <ul>
+        <li>Assign tasks to team members</li>
+        <li>Monitor project progress and milestones</li>
+        <li> Centralized files and messages</li>
+        <li>Private Lebals for Your Website and Users</li>
+      </ul>
+      <button class="btn-blue">Get Started Now</button>
+    </div>
+    <div class="img"><img src="img\manage-projects.webp" alt="Manage Projects"></div>
+  </div>
+
+  <div class="section reverse">
+    <div class="text">
+      <h2>Manage Clients</h2>
+      <p>
+        Easily add update and,
+        <a href="#" class="track-link">track client details</a> for any stage of a project with a seamless communication.
+      </p>
+      <h2 class="key-features-heading">Key Features</h2>
+      <ul>
+        <li>Client contact details & project history</li>
+        <li>Invoices, payments & billing</li>
+        <li>Secure, in-app messaging</li>
+      </ul>
+      <button class="btn-blue">Get Started Now</button>
+    </div>
+    <div class="img"><img src="img\manage-clients.webp" alt="Manage Clients"></div>
+  </div>
+
+  <div class="section">
+    <div class="text">
+      <h2>Manage Quotations</h2>
+      <p>
+          
+        <a href="#" class="quotations-link"> Create and track project quotes</a> with ease by organizing your project quotations.
+      </p>
+      <h2 class="key-features-heading">Key Features</h2>
+      <ul>
+        <li>Generate customizable PDF quotes</li>
+        <li>Track quote status and approvals</li>
+        <li>Convert quotes to projects seamlessly</li>
+      </ul>
+      <button class="btn-blue">Get Started Now</button>
+    </div>
+    <div class="img"><img src="img\manage-qoutations.webp" alt="Manage Quotations"></div>
+  </div>
+
+  <div class="section reverse">
+    <div class="text">
+      <h2>Manage Invoices</h2>
+      <p>
+        Simplify billing process and get paid faster by 
+        <a href="#" class="invoices-link">managing project invoices </a>efficiently.
+      </p>
+      <h2 class="key-features-heading">Key Features</h2>
+      <ul>
+        <li>Create detailed invoices with your branding</li>
+        <li>One-click PayPal or bank payments</li>
+        <li>Automatic reminders & overdue tracking</li>
+        <li>Integrate With Your Quickbooks Accounts</li>
+      </ul>
+      <button class="btn-blue">Get Started Now</button>
+    </div>
+    <div class="img"><img src="img\manage-invoices.webp" alt="Manage Invoices"></div>
+  </div>
+
+  <div class="section">
+    <div class="text">
+      <h2>Administration</h2>
+      <p>
+        Take control of 
+        <a href="#" class="administration-link">managing user settings,</a> user permissions, subscriptions and system security.
+      </p>
+      <h2 class="key-features-heading">Key Features</h2>
+      <ul>
+        <li>Manage user roles & permissions</li>
+        <li>Audit logs & compliance reporting</li>
+        <li>Secure, single sign-on</li>
+      </ul>
+      <button class="btn-blue">Get Started Now</button>
+    </div>
+    <div class="img"><img src="img\adminstration.webp" alt="Administration"></div>
+  </div>
+
+  <div class="section reverse">
+    <div class="text">
+      <h2>Messaging and Video</h2>
+      <p>
+        Improve 
+        <a href="#" class="messages-link">client communication</a> with our real time instant messaging and video tools.
+      </p>
+      <h2 class="key-features-heading">Key Features</h2>
+      <ul>
+        <li>Group and one-on-one chats</li>
+        <li>Instant file sharing</li>
+        <li>Host and record video meetings</li>
+      </ul>
+      <button class="btn-blue">Get Started Now</button>
+    </div>
+    <div class="img"><img src="img\manage-video.webp" alt="Messaging and Video"></div>
+  </div>
+
+  <!-- SUPPORT -->
+  <div class="support">
+    <h2>Our Support</h2>
+    <div class="items">
+      <div class="item">
+        <img src="img\noun-support-4831710.webp" alt="Support"/>
+        <strong>Support When You Need It</strong>
+        <p>Get guidance from our dedicated support team.</p>
+      </div>
+      <div class="item">
+        <img src="img\noun-assistance-6762704.webp" alt="Assistance"/>
+        <strong>Personalized Assistance</strong>
+        <p>Tailored solutions for your unique business needs.</p>
+      </div>
+      <div class="item">
+        <img src="img\noun-24hr-helpline-3309604.webp" alt="Anytime"/>
+        <strong>Available Anytime</strong>
+        <p>24/7/365 support to keep your business running smoothly.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- PRICING -->
+  <div class="pricing">
+    <h2>Subscription Plan</h2>
+    <p>Choose the Perfect Plan for Your Business</p>
+    <div class="cards">
+      <!-- Trial Plan -->
+      <div class="card">
+        <h3>Trial Plan</h3>
+        <p>Price: $0/month</p>
+        <ul>
+          <li>Manage up to 5 clients.</li>
+          <li>Access to basic project management tools.</li>
+          <li>Create and send up to 5 quotes per month.</li>
+          <li>Unlimited UI customization (colors).</li>
+          <li>Time tracking and mobile app.</li>
+          <li>Community support.</li>
+        </ul>
+        <button class="btn-order">Order Now</button>
+      </div>
+      <!-- Starter Plan -->
+      <div class="card">
+        <h3>Starter Plan</h3>
+        <p>Price: $20/month</p>
+        <ul>
+          <li>Manage up to 50 clients.</li>
+          <li>Access to core project management features.</li>
+          <li>Create and send up to 30 quotes per month.</li>
+          <li>Unlimited UI customization.</li>
+          <li>Time tracking and mobile app.</li>
+          <li>Email support and analytics.</li>
+        </ul>
+        <button class="btn-order">Order Now</button>
+      </div>
+      <!-- Pro Plan -->
+      <div class="card">
+        <h3>Pro Plan</h3>
+        <p>Price: $50/month</p>
+        <ul>
+          <li>Manage up to 100 clients.</li>
+          <li>Access to Pro Admin features.</li>
+          <li>Customizable UI and templates.</li>
+          <li>API access and advanced settings.</li>
+          <li>Priority email and chat support.</li>
+          <li>Team performance insights and advanced analytics.</li>
+        </ul>
+        <button class="btn-order">Order Now</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-left">
+        <img src="https://via.placeholder.com/100x30?text=Logo" alt="ClientRamp Logo" class="logo" />
+        <span class="logo-text">ClientRamp</span>
+      </div>
+  
+      <div class="footer-links">
+        <ul>
+          <li><i class="fas fa-sign-in-alt"></i> Get Started Now</li>
+          <li><i class="fas fa-sign-in-alt"></i> Sign In</li>
+          <li><i class="fas fa-sign-in-alt"></i> Support</li>
+          <li><i class="fas fa-sign-in-alt"></i> FAQ</li>
+          <li><i class="fas fa-sign-in-alt"></i> About Us</li>
+          <li><i class="fas fa-sign-in-alt"></i> Blog</li>
+          <li><i class="fas fa-envelope"></i> Contact Us</li>
+        </ul>
+      </div>
+  
+      <div class="footer-contact-section">
+        <p class="address">
+          <i class="fas fa-map-marker-alt"></i> 1105 Tryon Village Drive Suite 303 #27 Cary, NC 27518
+        </p>
+        <ul class="social-icons">
+          <li><i class="fab fa-facebook-f"></i></li>
+          <li><i class="fab fa-linkedin-in"></i></li>
+          <li><i class="fab fa-x-twitter"></i></li>
+          <li><i class="fab fa-instagram"></i></li>
+          <li><i class="fab fa-youtube"></i></li>
+          <li><i class="fab fa-pinterest-p"></i></li>
+          <li><i class="fab fa-tiktok"></i></li>
+        </ul>
+        <div class="review-section">
+          <p>Write us a review at:</p>
+          <p>SourceForge, Capterra, G2, Product Hunt,<br> Slashdot, Crozdesk and Trustpilot.</p>
+        </div>
+      </div>
+    </div>
+  
+    <hr />
+  
+    <div class="footer-bottom">
+      <p>
+        © 2025 ClientRamp - All rights reserved. Use of this website constitutes acceptance of our 
+        <a href="#">Subscription Agreement</a>, <a href="#">User Agreement</a>, 
+        <a href="#">Privacy Policy</a> and <a href="#">Cookie Policy</a>.
+      </p>
+      <p>
+        ClientRamp trademarks, product names, logos and other marks and designs are trademarks 
+        of OrganicRankings.com, LLC. or its subsidiaries and may not be used without permission.
+      </p>
+  
+      <div class="review-logos">
+        <img src="img/capterra.png" alt="Capterra" />
+        <img src="img/producthunt.png" alt="Product Hunt" />
+        <img src="img/g2crowd.png" alt="G2 Crowd" />
+        <img src="img/techradar.png" alt="TechRadar" />
+        <img src="img/sourceforge.png" alt="SourceForge" />
+      </div>
+    </div>
+  </footer>
+  
+
+</body>
+</html>
